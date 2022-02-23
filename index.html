@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>みんなの伝言板</h1>
+
+            <form action="" @submit.prevent="onSubmit">
+                <label for="name">名前:</label>
+                <input type="text" id="name" class="name-input" v-model="name">
+
+                <label for="message">メッセージ:</label>
+                <textarea name="" id="message" cols="30" rows="10" class="message-input" v-model="message"></textarea>
+
+                <p v-if="checkMessage" class="warning">20文字以内で入力してください</p>
+
+                <input class="btn" type="submit" :disabled="checkMessage || checkNull">
+            </form>
+
+            <div class="bord-wrap">
+                <div class="message-bord" v-for="post in posts" :key="index">
+                    <span class="message-board__name">{{post.name}}</span>
+                    <span class="message-board__message">{{post.message}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

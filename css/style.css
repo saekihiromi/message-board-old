@@ -1,0 +1,49 @@
+body{
+    background-color: green;
+}
+
+body,p{
+    margin: 0;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1{
+    color: yellow;
+    text-align: center;
+    font-style: italic;
+}
+
+label,input,textarea{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    width: 120px;
+    margin: 0 auto;
+}
+
+.name-input,.message-input{
+    margin-bottom: 16px;
+}
+
+.warning{
+    font-style: 14px;
+    color: red;
+}
+
+.message-board{
+    border-bottom: 1px solid #000;
+    margin: 16px auto;
+    width: 60%;
+}
+
+.message-board__name{
+    color: white;
+    margin-right: 8px;
+    font-weight: bold;
+}
